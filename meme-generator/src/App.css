@@ -1,0 +1,78 @@
+
+body {
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  margin: 0;
+}
+
+main {
+  padding: 36px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+  height: 65px;
+  background: linear-gradient(90deg, #e4459f 1.18%, #eb83a5 100%);
+  color: white;
+  padding: 30px; 
+  overflow: hidden;
+  width: 100%; 
+  top: 0; 
+  left: 0; 
+}
+
+
+.header--image {
+  height: 100px;
+  float: left;
+  margin-right: 6px;
+}
+
+.header--title {
+  font-size: 2rem;
+  margin-right: auto;
+}
+
+.header--slogan {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.form-container {
+  padding: 0 20px; 
+}
+.form {
+  display: grid;
+  grid-template: 40px 40px / 1fr 1fr;
+  gap: 17px;
+  justify-content: center;
+  margin: 0 auto; 
+}
+
+.form--button {
+  grid-column: 1 / -1;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  text-align: center; 
+  background: linear-gradient(90deg, #e4459f 1.18%, #eb83a5 100%);
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+form--input {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  border-radius: 5px;
+  border: 1px solid #D5D4D8;
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  text-indent: 5px;
+}
+
+form--label {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-weight: bold;
+  font-size: 80;
+}
+
