@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import memesData from "../memesData";
+import memesData from "../memesData.js";
 
 // state - way for React to remember saved values within a component
 // using props over state - want to pass data into a component so that component can determine what will get displayed
@@ -17,8 +17,7 @@ export default function Meme() {
 
     return (
         <main>
-            <div>
-                <form className="form">
+            <div className="form">
 
                     <div>
                         <label className="form--label" alt= "Top Text">Top Text </label>
@@ -41,8 +40,7 @@ export default function Meme() {
                     <button className="form--button" onClick={getMemeImage}>
                         Get New Meme Image
                     </button>
-
-                </form>
+                    
             </div>
 
             <img src= {memeImage} alt="Meme Image" className = "meme--image" />
