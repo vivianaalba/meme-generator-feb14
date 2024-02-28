@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import memesData from "../memesData.js";
+//import memesData from "../memesData.js";
 
 // state - way for React to remember saved values within a component
 // using props over state - want to pass data into a component so that component can determine what will get displayed
@@ -8,6 +8,8 @@ import memesData from "../memesData.js";
 
 export default function Meme() {
     //const [memeImage, setMemeImage] = React.useState("https://i.imgflip.com/3oevdk.jpg");
+    // call api and get data needed
+    // sets text to an empty string
     const [meme, setMeme] = React.useState({
         topText: "",
         bottomText: "",
@@ -15,6 +17,9 @@ export default function Meme() {
     })
     const [allMemes, setAllMemes] = React.useState([])
     
+    // hook used to grab data from api and turn it to a json item
+    // tells react that your component needs to do something after render
+    // note: fetch used instead of axios
     React.useEffect(() => {
         fetch("https://api.imgflip.com/get_memes")
             .then(res => res.json())
@@ -22,6 +27,7 @@ export default function Meme() {
     }, [])
     
     function getMemeImage() {
+        // generate random number to get an image from api
         const randomNumber = Math.floor(Math.random() * allMemes.length)
         const url = allMemes[randomNumber].url
         setMeme(prevMeme => ({
@@ -32,6 +38,9 @@ export default function Meme() {
     }
 
     function handleChange(event) {
+        // destructure name & value
+        // event.target gives us reference to the button element clicked
+        // used to update state of component or to make api call
         const {name, value} = event.target
         setMeme(prevMeme => ({
             ...prevMeme,
