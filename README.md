@@ -1,5 +1,5 @@
 # About
-<br>Meme Generator Application that uses Vite with React and Javascript. Application uses an API with data of 100 memes, provided by Scrimba. Random meme is generated at the click of a button. Further in app development, user will have the ability to add text at the top and bottom of the image.
+<br>Meme Generator Application that uses Vite with React and Javascript. Application uses an API with data of 100 memes, provided by Scrimba. Random meme is generated at the click of a button. User has the ability to add text at the top and bottom of the image and uses an updated API to call for the newest memes available.
 
 ## Technologies
 <br>Tech: Javascript, HTML, CSS
