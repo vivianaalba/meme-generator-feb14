@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 //import memesData from "../memesData.js";
 
 // state - way for React to remember saved values within a component
@@ -48,6 +48,26 @@ export default function Meme() {
         }))
     }
 
+    // class ImageDownloader extends React.Component {
+    //     downloadImage = () => {
+    //       const imageUrl = randomImage;
+    //       const fileName = 'meme-generator.jpg';
+      
+    //       fetch(imageUrl)
+    //         .then(response => response.blob())
+    //         .then(blob => {
+    //           const url = window.URL.createObjectURL(new Blob([blob]));
+    //           const link = document.createElement('a');
+    //           link.href = url;
+    //           link.setAttribute('download', fileName);
+    //           document.body.appendChild(link);
+    //           link.click();
+    //           link.parentNode.removeChild(link);
+    //         });
+    //     };
+    // }
+      
+
     return (
         <main>
             <div className="form">
@@ -87,6 +107,10 @@ export default function Meme() {
                 <h2 className="meme--text top">{meme.topText}</h2>
                 <h2 className="meme--text bottom">{meme.bottomText}</h2>
             </div>
+
+            {/* <div>
+              <button onClick={this.downloadImage}>Download Image</button>
+            </div> */}
 
         </main>
     );
