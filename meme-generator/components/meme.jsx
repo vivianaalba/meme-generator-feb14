@@ -1,5 +1,5 @@
 import React from "react";
-//import memesData from "../memesData.js";
+import handleDownload from '../components/download';
 
 // state - way for React to remember saved values within a component
 // using props over state - want to pass data into a component so that component can determine what will get displayed
@@ -48,26 +48,6 @@ export default function Meme() {
         }))
     }
 
-    // class ImageDownloader extends React.Component {
-    //     downloadImage = () => {
-    //       const imageUrl = randomImage;
-    //       const fileName = 'meme-generator.jpg';
-      
-    //       fetch(imageUrl)
-    //         .then(response => response.blob())
-    //         .then(blob => {
-    //           const url = window.URL.createObjectURL(new Blob([blob]));
-    //           const link = document.createElement('a');
-    //           link.href = url;
-    //           link.setAttribute('download', fileName);
-    //           document.body.appendChild(link);
-    //           link.click();
-    //           link.parentNode.removeChild(link);
-    //         });
-    //     };
-    // }
-      
-
     return (
         <main>
             <div className="form">
@@ -103,14 +83,17 @@ export default function Meme() {
             </div>
 
             <div className="meme">
-                <img src={meme.randomImage} className="meme--image" />
+                <img src={meme.randomImage} id="meme--image" />
                 <h2 className="meme--text top">{meme.topText}</h2>
                 <h2 className="meme--text bottom">{meme.bottomText}</h2>
             </div>
 
-            {/* <div>
-              <button onClick={this.downloadImage}>Download Image</button>
-            </div> */}
+            {/* Download Image Button and handleDownload function */}
+            <div className='download--button-container'>
+                    <button className="download--button" onClick={() => {handleDownload('meme--image', 'meme-generator.png')}}>
+                    Download Image
+                </button>
+            </div>
 
         </main>
     );
