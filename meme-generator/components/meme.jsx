@@ -88,9 +88,9 @@ export default function Meme() {
                 <h2 className="meme--text bottom">{meme.bottomText}</h2>
             </div>
 
-            {/* Download Image Button and handleDownload function */}
+            {/* Download Image Button */}
             <div className='download--button-container'>
-                    <button className="download--button" onClick={() => {handleDownload('meme--image', 'meme-generator.png')}}>
+                <button className="download--button" onClick={() => {handleDownload(meme.randomImage, 'meme-generator.png', meme.topText, meme.bottomText)}}>
                     Download Image
                 </button>
             </div>
